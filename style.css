@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+/* header */
+header .logo{
+  font-size: 50px;
+  font-weight: 700;
+}
+header ul{
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: rgb(251, 163, 235);
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+header a{
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header img{
+  display: block;
+  max-width: 50px;
+}
+header a:link,
+header a:visited,
+header a:hover,
+header a:active
+{
+  color: rgb(251, 163, 235);
+}
+
+/* hero */
+.hero{
+  padding-top:120px;
+  position:relative;
+  width:100vw;
+}
+.hero h1{
+  position:absolute;
+  top: 33%;
+  left: 10%;
+  color:rgb(251, 163, 235);
+  font-size: clamp(24px, 6vw, 64px);
+  font-weight: 700;
+    text-shadow:
+    -5px -5px 0 white,
+     5px -5px 0 white,
+    -5px  5px 0 white,
+     5px  5px 0 white,
+     0px  0px 5px white;
+}
+.hero img{
+  width: 100vw;
+}
+.X{
+  position:absolute;
+  background-color: rgb(251, 163, 235);
+  color: white;
+  font-size: clamp(10px, 1vw, 15px);
+  font-weight: 700;
+  top: 75%;
+  right:30%;
+  padding: 2rem;
+  border-radius: 50%;
+  text-align: center;
+}
+#x{
+  font-size: clamp(15px, 1vw, 40px);
+}
+.X a:link,
+.X a:visited,
+.X a:hover,
+.X a:active
+{
+  color: white;
+}
+.tv{
+  position:absolute;
+  background-color: rgb(251, 163, 235);
+  color: white;
+  font-size: clamp(10px, 1vw, 15px);
+  font-weight: 700;
+  top: 75%;
+  right: 10%;
+  padding: 2rem;
+  border-radius: 50%;
+  text-align: center;
+}
