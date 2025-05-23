@@ -5,9 +5,20 @@
   list-style: none;
   text-decoration: none;
 }
+:root{
+  --white: white;
+  --pink: rgb(251, 163, 235);
+  --brown: rgb(88, 71, 71);
+  --lightgreen:rgb(203, 237, 197);
+  --lightyellow: rgb(255, 243, 175);
+  --h2-font-wight: 700;
+  --h2-font-size: 3rem;
+}
 body{
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-color: var(--lightgreen);
 }
+
 /* header */
 header .logo{
   font-size: 50px;
@@ -21,7 +32,7 @@ header ul{
   left: 0;
   width: 100%;
   background-color: white;
-  color: rgb(251, 163, 235);
+  color: var(--pink);
   justify-content: center;
   align-items: center;
   height: 120px;
@@ -41,7 +52,7 @@ header a:visited,
 header a:hover,
 header a:active
 {
-  color: rgb(251, 163, 235);
+  color: var(--pink);
 }
 
 /* hero */
@@ -54,7 +65,7 @@ header a:active
   position:absolute;
   top: 33%;
   left: 10%;
-  color:rgb(251, 163, 235);
+  color: var(--pink);
   font-size: clamp(24px, 6vw, 64px);
   font-weight: 700;
     text-shadow:
@@ -69,7 +80,7 @@ header a:active
 }
 .X{
   position:absolute;
-  background-color: rgb(251, 163, 235);
+  background-color: var(--pink);
   color: white;
   font-size: clamp(10px, 1vw, 15px);
   font-weight: 700;
@@ -91,7 +102,7 @@ header a:active
 }
 .tv{
   position:absolute;
-  background-color: rgb(251, 163, 235);
+  background-color: var(--pink);
   color: white;
   font-size: clamp(10px, 1vw, 15px);
   font-weight: 700;
@@ -100,4 +111,41 @@ header a:active
   padding: 2rem;
   border-radius: 50%;
   text-align: center;
+}
+
+/* Youtube */
+#youtube h2{
+  text-align: center;
+  font-weight: var(--h2-font-wight);
+  font-size: var(--h2-font-size);
+  color: var(--brown);
+}
+#youtube ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#youtube li{
+  margin: 10px;
+  padding: 50px;
+  background-color: var(--lightyellow);
+  border-radius: 20%;
+
+}
+@media (min-width: 1024px) {
+  #youtube li:last-child {
+    display: none;
+  }
+}
+#youtube button{
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  font-weight: var(--h2-font-wight);
+  font-size: var(--h2-font-size);
+  background-color: var(--brown);
+  color: var(--white);
+  border-radius: 20px;
 }
