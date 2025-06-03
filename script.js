@@ -1,3 +1,44 @@
+// nav closed
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelectorAll("header nav a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const href = link.getAttribute("href");
+      const isSamePageAnchor = href && href.startsWith("./index.html#");
+
+      if (window.innerWidth <= 1200 && isSamePageAnchor) {
+        setTimeout(() => {
+          menuToggle.checked = false;
+        }, 200); 
+      }
+    });
+  });
+});
+
+// characters
+document.addEventListener("DOMContentLoaded", function () {
+  const target = document.querySelector("#characters ul");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          target.classList.add("animate__fadeInLeft", "animate__animated", "animate__slow");
+          target.style.opacity = 1;
+          observer.unobserve(target);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  observer.observe(target);
+});
+
 // dvd slider
 const images = [
   "./imgs/DVD_01.png",

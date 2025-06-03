@@ -16,6 +16,9 @@
   --button-font-size: clamp(15px, 2vw, 56px);
   --button-width: clamp(200px, 20vw, 400px);;
 }
+html {
+  scroll-behavior: smooth;
+}
 section{
   scroll-margin-top: 120px;
 }
@@ -51,10 +54,11 @@ section > a{
 #menu-icon{
   display: none;
   position: fixed;
-  top: 1vh;
+  top: 40px;
   right: 3vw;
+  transform: translateY(-50%);
   color: var(--pink);
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
   font-weight: 700;
   z-index: 1000;
   border: none;
@@ -74,7 +78,7 @@ header nav{
   left: 0;
   width: 100%;
   height: 120px;
-  padding: 0 16vw;
+  padding: 0 3vw;
 }
 header .logo{
   font-size: 50px;
@@ -106,6 +110,7 @@ header li:last-child{
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -1;
 }
 header a:link,
 header a:visited,
@@ -124,6 +129,12 @@ header a:active
   }
   header ul{
     display: none;
+  }
+  header .logo{
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   header:has(#menu-toggle:checked) #nav-list{
     width: 100vw;
@@ -243,6 +254,7 @@ header a:active
   padding: 2.5vw;
   background-color: var(--lightyellow);
   border-radius: clamp(10px, 4vw, 50px);
+  width:fit-content;
 }
 #youtube iframe{
   width: 200px;
@@ -275,6 +287,7 @@ header a:active
   #youtube ul,
   #youtube li{
     display: block;
+    margin: 1vh auto;
   }
   #youtube li:last-child {
     display: none;
@@ -291,7 +304,6 @@ header a:active
 }
 #information ul{
   max-width: max-content;
-  min-width: 350px;
   width: 100vw;
   margin: clamp(12px, 1.5vw, 30px) auto;
 }
@@ -372,10 +384,11 @@ header a:active
   display: flex;
   justify-content: center;
   align-items: baseline;
-  margin: 1rem;
+  margin: clamp(0.5rem, 1vw, 1rem);
+  opacity: 0;
 }
 #characters li{
-  margin: 2rem;
+  margin: clamp(1rem, 2vw, 2rem);
 }
 #characters p{
   text-align: center;
@@ -410,6 +423,7 @@ header a:active
   font-size: clamp(12px, 1.5vw, 20px);
   color: var(--brown);
   padding: 2vh clamp(5px, 1.5vw, 20px);
+  width: fit-content;
   margin: 0 auto;
 }
 #anime-info li{
@@ -491,7 +505,12 @@ footer ul{
   align-items: center;
   margin: 30px;
 }
-
+footer li{
+  margin: clamp(1rem, 2vw, 2rem);
+}
+footer li img{
+  width: clamp(50px, 8vw, 200px);
+}
 /* back-to-top */
 #back-to-top{
   position: fixed;
@@ -499,7 +518,7 @@ footer ul{
   left: 2rem;
   border: none;
   background: none;
-  z-index: 1000;
+  z-index: 998;
   display: none;
 }
 #back-to-top img{
