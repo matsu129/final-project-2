@@ -5,50 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="script.js" defer></script>
   <title>Home</title>
 </head>
 <body>
   <header>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <label for="menu-toggle" id="menu-icon" aria-label="open menu">
+      <div #id="menu-text">
+        ☰
+        <br>
+        menu
+      </div>
+    </label>
     <nav aria-label="main-nav">
-      <ul>
-        <li><a href="#" class="logo">Chiikawa</a></li>
-        <li><a href="#youtube">
-          YouTube
-          <img src="./assets/ic_YouTube.png">
-        </a></li>
-        <li><a href="#infomation">
-          Infomation
-          <img src="./assets/ic_Infomation.png">
-        </a></li>
-        <li><a href="#introduction">
-          Introduction
-          <img src="./assets/ic_Introduction.png">
-        </a></li>
-        <li><a href="#story">
-          Story
-          <img src="./assets/ic_Story.png">
-        </a></li>
-        <li><a href="./characters">
-          Characters
-          <img src="./assets/ic_Characters.png">
-        </a></li>
-        <li><a href="#staff&casts">
-          Staff & Casts
-          <img src="./assets/ic_Staff&Casts.png">
-        </a></li>
-        <li><a href="animeinfo">
-          Anime Info
-          <img src="./assets/ic_AnimeInfo.png">
-        </a></li>
-        <li><a href="goods">
-          Goods
-          <img src="./assets/ic_Goods.png">
-        </a></li>
-        <li><a href="bd&dvd">
-          BD & DVD
-          <img src="./assets/ic_BD&DVD.png">
-        </a></li>
-      </ul>
+      <div><a href="#" class="logo">Chiikawa</a></div>
+      <div id="nav-list">
+        <ul>
+          <li><a href="#youtube">
+            YouTube
+            <img src="./assets/ic_YouTube.png">
+          </a></li>
+          <li><a href="#information">
+            Information
+            <img src="./assets/ic_Infomation.png">
+          </a></li>
+          <li><a href="#introduction">
+            Introduction
+            <img src="./assets/ic_Introduction.png">
+          </a></li>
+          <li><a href="#episodes">
+            Episodes
+            <img src="./assets/ic_Story.png">
+          </a></li>
+          <li><a href="./characters.html">
+            Characters
+            <img src="./assets/ic_Characters.png">
+          </a></li>
+          <li><a href="#staffandcast">
+            Staff & Casts
+            <img src="./assets/ic_Staff&Casts.png">
+          </a></li>
+          <li><a href="#anime-info">
+            Anime Info
+            <img src="./assets/ic_AnimeInfo.png">
+          </a></li>
+          <li><a href="#goods">
+            Goods
+            <img src="./assets/ic_Goods.png">
+          </a></li>
+          <li><a href="#bdanddvd">
+            BD & DVD
+            <img src="./assets/ic_BD&DVD.png">
+          </a></li>
+          <li>
+            <img id="header-img" src="./imgs/nav-img.png">
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
@@ -95,87 +110,90 @@
           <h3>episode 4</h3>
         </li>
       </ul>
-      <button type="button" href="">All episodes</button>
+      <a href="https://www.youtube.com/playlist?list=PLHIKP_Dyl1zwJy0JjSvVV5l8Kyg-8sjdv">All episodes</a>
     </section>
     <section id="information">
       <h2>Information</h2>
       <ul>
         <li>
-          <p>April 28, 2025</p>
+          <h3>April 28, 2025</h3>
           <p>Special New Birthday Episode Announced!</p>
         </li>
         <li>
-          <p>March 20, 2025</p>
+          <h3>March 20, 2025</h3>
           <p>Revival Broadcast Starting in April!</p>
         </li>
-      </ul>
         <li>
-          <p>June 12, 2024</p>
+          <h3>June 12, 2024</h3>
           <p>Blu-ray & DVD Vol.3 Coming January 8, 2025 (Wed)!</p>
         </li>
       </ul>
-      <button type="button" href="">more Info</button>
+      <a href="">more Info</a>
     </section>
-    <section class="introduction">
+    <section id="introduction">
       <h2>Introduction</h2>
-      <p>“Something small and cute”</p>
-      <p>Chiikawa and friends bring you a heartwarming story filled with fun, friendship, and a few tearful moments.</p>
+      <p>
+        “Something small and cute”<br>
+        Chiikawa and friends bring you a heartwarming story filled with fun, friendship, and a few tearful moments.
+      </p>
       <p>Even when things get a little tough, there’s always someone kind nearby.</p>
       <p>The beloved manga Chiikawa by illustrator Nagano is now an adorable anime!</p>
     </section>
-    <section class="episodes">
+    <section id="episodes">
       <h2>Episodes</h2>
       <ul>
         <li>
-          <p>257</p>
+          <p class="episode-no">257</p>
           <img src="./imgs/257.jpg" alt="257">
           <p>Happy birthday</p>
         </li>
         <li>
-          <p>256</p>
+          <p class="episode-no">256</p>
           <img src="./imgs/256.jpg" alt="256">
           <p>Shisa Certification No. 8</p>
         </li>
         <li>
-          <p>255</p>
+          <p class="episode-no">255</p>
           <img src="./imgs/255.jpg" alt="255">
           <p>Shisa Certification No. 7</p>
         </li>
         <li>
-          <p>254</p>
+          <p class="episode-no">254</p>
           <img src="./imgs/254.jpg" alt="254">
           <p>Shisa Certification No. 6</p>
         </li>
         <li>
-          <p>253</p>
+          <p class="episode-no">253</p>
           <img src="./imgs/253.jpg" alt="253">
           <p>Shisa Certification No. 5</p>
         </li>
         <li>
-          <p>252</p>
+          <p class="episode-no">252</p>
           <img src="./imgs/252.jpg" alt="252">
           <p>Shisa Certification No. 4</p>
         </li>
       </ul>
-      <button type="button" href="">All episodes</button>
+      <a href="">All episodes</a>
     </section>
-    <section class= "character">
+    <section id= "characters">
       <h2>Characters</h2>
-      <div class="chiikawa">
-        <img src="./imgs/img_chara_01.png" alt="chiikawa">
-        <p>Chiikawa</p>
-      </div>
-      <div class="hachiware">
-        <img src="./imgs/img_chara_02.png" alt="hachiware">
-        <p>Hachiware</p>
-      </div>
-      <div class="usagi">
-        <img src="./imgs/img_chara_03.png" alt="usagi">
-        <p>Usagi</p>
-      </div>
-      <button type="button" href="">view all</button>
+      <ul class="animate__animated animate__fadeInLeft animate__slow">
+        <li class="chiikawa">
+          <img src="./imgs/img_chara_01.png" alt="chiikawa">
+          <p>Chiikawa</p>
+        </li>
+        <li class="hachiware">
+          <img src="./imgs/img_chara_02.png" alt="hachiware">
+          <p>Hachiware</p>
+        </li>
+        <li class="usagi">
+          <img src="./imgs/img_chara_03.png" alt="usagi">
+          <p>Usagi</p>
+        </li>
+      </ul>
+      <a href="">view all</a>
     </section>
-    <section class="staff&cast">
+    <section id="staffandcast">
       <h2>Staff & Cast</h2>
       <div class = "staff">
         <ul>
@@ -217,32 +235,45 @@
         </ul>
       </div>
     </section>
-    <section class="anime-info">
-      <div class="tv_info">
-        <p>Catch "Chiikawa" on Fuji TV's Mezamashi TV </p>
-        <p>every Tuesday & Friday around 7:40 AM!</p>
-      </div>
-      <div class="stream">
-        <p>Missed it?</p>
-        <p>Stream it for one week only starting from 8:00 AM on the same day!</p>
-      </div>
-      <button type="button" href="">more Info</button>
+    <section id="anime-info">
+      <h2>Anime Info</h2>
+      <ul>
+        <li class="tv_info">
+          <img src="./assets/ic_Animeinfo_TV.png">
+          <div>
+            <p>Catch "Chiikawa" on Fuji TV's Mezamashi TV </p>
+            <p>every Tuesday & Friday around 7:40 AM!</p>
+          </div>
+        </li>
+        <li class="stream">
+          <img src="./assets/ic_Animeinfo_Stream.png">
+          <div>
+            <p>Missed it?</p>
+            <p>Stream it for one week only starting from 8:00 AM on the same day!</p>
+          </div>
+        </li>
+      </ul>
+      <a type="button" href="">more Info</a>
     </section>
-    <section class="goods">
+    <section id="goods">
       <h2>Goods</h2>
-      <a href="https://chiikawa-info.jp/" ><img src="./imgs/bn_goods_01.png"></a>
-      <a href="https://chiikawamarket.jp/" ><img src="./imgs/bn_goods_02.png"></a>
+      <div>
+        <a href="https://chiikawa-info.jp/" ><img src="./imgs/bn_goods_01.png"></a>
+        <a href="https://chiikawamarket.jp/" ><img src="./imgs/bn_goods_02.png"></a>
+      </div>
     </section>
-    <section class="bd&dvd">
+    <section id="bdanddvd">
       <h2>BD & DVD</h2>
-      <img src="./imgs/DVD_01.png" alt="DVD_01">
-      <img src="./imgs/DVD_02.png" alt="DVD_02">
-      <img src="./imgs/DVD_03.png" alt="DVD_04">
-      <img src="./imgs/DVD_04.png" alt="DVD_04">
+      <div class="slider">
+        <button id="prev">&lt;</button>
+        <img id="dvd-img" src="./imgs/DVD_01.png" alt="DVD_01">
+        <button id="next">&gt;</button>
+      </div>
     </section>
     <footer>
+      <img id="footer-img" src="./imgs/all.png">
       <nav>
-        <p>Share this site</p>
+        <h3>Share this site</h3>
         <ul>
           <li><a href="https://twitter.com/share?url=https://www.anime-chiikawa.jp/&text=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F&hashtags=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F,%E3%82%A2%E3%83%8B%E3%83%A1"><img src="./assets/ic_sns_twi.png"></a></li>
           <li><a href="https://social-plugins.line.me/lineit/share?url=https://www.anime-chiikawa.jp/"><img src="./assets/ic_sns_line.png"></a></li>
@@ -252,6 +283,9 @@
       </nav>
       <p>&copy; Nagano / Chiikawa Production Committee</p>
     </footer>
+    <button id="back-to-top" aria-label="Back to top">
+      <img src="./assets/scrolltop.png">
+    </button>
   </main>
 </body>
 </html>
