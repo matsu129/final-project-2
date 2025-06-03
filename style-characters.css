@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+:root{
+  --white: white;
+  --pink: rgb(251, 163, 235);
+  --brown: rgb(88, 71, 71);
+  --lightgreen:rgb(203, 237, 197);
+  --lightyellow: rgb(255, 243, 175);
+  --h2-font-wight: 700;
+  --h2-font-size: clamp(32px, 3vw, 64px);
+  --button-font-size: clamp(15px, 2vw, 56px);
+  --button-width: clamp(200px, 20vw, 400px);;
+}
