@@ -256,12 +256,12 @@ section > a{
 #character-list li::after {
   content: "";
   position: absolute;
-  top: -50%;
+  top: -40%;
   left: 50%;
   transform: translateX(-50%) scale(0.95);
   opacity: 0;
-  width: 120px;
-  height: clamp(2rem, 10vh, 30rem);
+  width: clamp(2rem, 20vh, 30rem);
+  height: clamp(2rem, 20vh, 30rem);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -290,6 +290,18 @@ section > a{
 }
 #characters img{
   width: 18vw;
+}
+@media (max-width: 1200px) {
+  #character-list li::after {
+    top:-50%;
+  }
+}
+@media (max-width: 800px){
+  #character-list li::after {
+    top: -10vh;
+    width: clamp(2rem, 10vh, 20rem);
+    height: clamp(2rem, 10vh, 20rem);
+  }
 }
 
 /* staffandcast */
