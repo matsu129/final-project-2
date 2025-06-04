@@ -17,6 +17,51 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// youtube
+  document.querySelectorAll('.yt-placeholder').forEach(div => {
+    const id = div.dataset.id;
+    const thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+
+    div.style.position = 'relative';
+    div.style.cursor = 'pointer';
+    div.style.paddingTop = '56.25%'; // 16:9
+    div.style.backgroundImage = `url(${thumbnail})`;
+    div.style.backgroundSize = 'cover';
+    div.style.backgroundPosition = 'center';
+
+    const playButton = document.createElement('div');
+    playButton.style.position = 'absolute';
+    playButton.style.top = '50%';
+    playButton.style.left = '50%';
+    playButton.style.transform = 'translate(-50%, -50%)';
+    playButton.style.width = '64px';
+    playButton.style.height = '64px';
+    playButton.style.background = 'rgba(0, 0, 0, 0.6)';
+    playButton.style.borderRadius = '50%';
+    playButton.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)';
+    playButton.style.display = 'flex';
+    playButton.style.justifyContent = 'center';
+    playButton.style.alignItems = 'center';
+    playButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="36" height="36"><path d="M8 5v14l11-7z"/></svg>`;
+    div.appendChild(playButton);
+
+    div.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      iframe.title = 'YouTube video player';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.style.position = 'absolute';
+      iframe.style.top = 0;
+      iframe.style.left = 0;
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      div.innerHTML = ''; 
+      div.appendChild(iframe);
+    });
+  });
+
 // characters
 document.addEventListener("DOMContentLoaded", function () {
   const target = document.querySelector("#characters ul");

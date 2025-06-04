@@ -21,7 +21,7 @@ section > a{
   color: var(--white);
   border-radius: 50px;
   border: none;
-  text-wrap: none;
+  white-space: nowrap;
   text-align: center;
 }
 /* hero */
@@ -111,7 +111,7 @@ section > a{
   border-radius: clamp(10px, 4vw, 50px);
   width:fit-content;
 }
-#youtube iframe{
+#youtube div{
   width: 200px;
   aspect-ratio: 16 / 9;
 }
@@ -244,6 +244,43 @@ section > a{
 }
 #characters li{
   margin: clamp(1rem, 2vw, 2rem);
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+#character-list li:hover {
+  transform: scale(1.05);
+}
+#character-list li::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  opacity: 0;
+  width: 120px;
+  height: clamp(2rem, 10vh, 30rem);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+#character-list li:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+#character-list .chiikawa::after {
+  background-image: url('./imgs/chiikawa_bubble.png');
+}
+#character-list .hachiware::after {
+  background-image: url('./imgs/hachiware_bubble.png');
+}
+#character-list .usagi::after {
+  background-image: url('./imgs/usagi_shout1.png');
 }
 #characters p{
   text-align: center;
@@ -343,7 +380,7 @@ footer{
   background-color: rgb(59, 125, 59);
 }
 #footer-img{
-  max-width: 80vw;
+  width: 60vw;
   height: auto;
   text-align: center;
 }
