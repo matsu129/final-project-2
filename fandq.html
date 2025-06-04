@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./common.css">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>FAQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .floaty {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes bubble {
+      0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-200px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 9999px;
+      animation: bubble 6s ease-in infinite;
+    }
+    .bubble:nth-child(odd) {
+      width: 6px;
+      height: 6px;
+      animation-delay: 1s;
+    }
+    .bubble:nth-child(even) {
+      animation-delay: 2s;
+    }
+  </style>
+</head>
+<body class="relative bg-gradient-to-b from-blue-100 to-blue-200 min-h-screen">
+  <header>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <label for="menu-toggle" id="menu-icon" aria-label="open menu">
+      <div #id="menu-text">
+        ☰
+        <br>
+        menu
+      </div>
+    </label>
+    <nav aria-label="main-nav">
+      <div><a href="#" class="logo">Chiikawa</a></div>
+      <div id="nav-list">
+        <ul>
+          <li><a href="./index.html#youtube">
+            YouTube
+            <img src="./assets/ic_YouTube.png">
+          </a></li>
+          <li><a href="./index.html#information">
+            Information
+            <img src="./assets/ic_Infomation.png">
+          </a></li>
+          <li><a href="./index.html#introduction">
+            Introduction
+            <img src="./assets/ic_Introduction.png">
+          </a></li>
+          <li><a href="./index.html#episodes">
+            Episodes
+            <img src="./assets/ic_Story.png">
+          </a></li>
+          <li><a href="./characters.html">
+            Characters
+            <img src="./assets/ic_Characters.png">
+          </a></li>
+          <li><a href="./index.html#staffandcast">
+            Staff & Casts
+            <img src="./assets/ic_Staff&Casts.png">
+          </a></li>
+          <li><a href="./index.html#anime-info">
+            Anime Info
+            <img src="./assets/ic_AnimeInfo.png">
+          </a></li>
+          <li><a href="./index.html#goods">
+            Goods
+            <img src="./assets/ic_Goods.png">
+          </a></li>
+          <li><a href="./index.html#bdanddvd">
+            BD & DVD
+            <img src="./assets/ic_BD&DVD.png">
+          </a></li>
+          <li><a href="./fandq.html">
+            F&Q
+            <img src="./assets/faq.png">
+          </a></li>
+          <li><a href="./contactUs.html">
+            Contact Us
+            <img src="./assets/contact.png">
+          </a></li>
+          <li>
+            <img id="header-img" src="./imgs/nav-img.png">
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- bubble -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="bubble left-[10%]"></div>
+    <div class="bubble left-[30%]"></div>
+    <div class="bubble left-[50%]"></div>
+    <div class="bubble left-[70%]"></div>
+    <div class="bubble left-[90%]"></div>
+  </div>
+
+  <!-- character img -->
+  <img src="./imgs/hachi-sasu.avif"
+       alt="Character"
+       class="absolute bottom-32 md:left-32 left-10 w-24 floaty z-10" />
+  <img src="./imgs/momonga.png"
+       alt="Character"
+       class="absolute bottom-32 md:right-32 right-10 w-24 floaty z-10" />
+
+  <!-- FAQ -->
+  <main class="relative z-20 flex justify-center items-center pt-32 pb-44 px-4 text-gray-800">
+    <div class="bg-white bg-opacity-70 backdrop-blur-md rounded-xl shadow-xl p-8 w-full max-w-2xl">
+      <h1 class="text-3xl font-bold text-center mb-6 text-blue-600">Frequently Asked Questions</h1>
+
+      <div class="space-y-4">
+        <!-- Q1 -->
+        <details class="group bg-blue-50 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg text-blue-800 group-open:underline">What is Chiikawa?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor"
+              class="inline align-middle size-6 transition-transform duration-300 group-open:rotate-180">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </summary>
+          <p class="mt-2 text-sm text-gray-700">Chiikawa is a popular Japanese character series featuring cute small creatures living everyday lives.</p>
+        </details>
+
+        <!-- Q2 -->
+        <details class="group bg-blue-50 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg text-blue-800 group-open:underline">How can I watch the anime?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor"
+              class="inline align-middle size-6 transition-transform duration-300 group-open:rotate-180">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </summary>
+          <p class="mt-2 text-sm text-gray-700">You can watch the Chiikawa anime on various platforms like YouTube or local streaming services.</p>
+        </details>
+
+        <!-- Q3 -->
+        <details class="group bg-blue-50 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg text-blue-800 group-open:underline">Where can I buy goods?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor"
+              class="inline align-middle size-6 transition-transform duration-300 group-open:rotate-180">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </summary>
+          <p class="mt-2 text-sm text-gray-700">Goods are available online and in official stores across Japan. Check the "Goods" section for details.</p>
+        </details>
+
+        <!-- Q4 -->
+        <details class="group bg-blue-50 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg text-blue-800 group-open:underline">
+            Are there English subtitles available?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor"
+              class="inline align-middle size-6 transition-transform duration-300 group-open:rotate-180">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </summary>
+          <p class="mt-2 text-sm text-gray-700">Yes, many platforms offer English subtitles for Chiikawa episodes. Check the settings on your video player.</p>
+        </details>
+
+        <!-- Q5 (funny version) -->
+        <details class="group bg-blue-50 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg text-blue-800 group-open:underline">
+            Can Chiikawa survive in the wild?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor"
+              class="inline align-middle size-6 transition-transform duration-300 group-open:rotate-180">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </summary>
+          <p class="mt-2 text-sm text-gray-700">
+            Probably not. Unless the wild includes snacks, friends, and occasional screaming. Then maybe.
+          </p>
+        </details>
+
+
+        <!-- Q6 -->
+        <details class="group bg-blue-50 p-4 rounded-lg cursor-pointer">
+          <summary class="font-semibold text-lg text-blue-800 group-open:underline">
+            Who are the main characters?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor"
+              class="inline align-middle size-6 transition-transform duration-300 group-open:rotate-180">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </summary>
+          <p class="mt-2 text-sm text-gray-700">The main characters include Chiikawa, Hachiware, and Usagi—each with their own unique and adorable personality.</p>
+        </details>
+      </div>
+    </div>
+  </main>
+  <footer class="text-center m-10">
+    <p class="text-sm">This website uses cookies for site operation and management purposes.For more details, please refer to our <a href="https://www.fujitv.co.jp/userguide/protection.html?_ga=2.241454023.472348913.1747879599-1548855718.1747350247">Privacy Policy.</a></p>
+    <p class="text-sm">&copy; Nagano / Chiikawa Production Committee</p>
+  </footer>
+</body>
+</html>
