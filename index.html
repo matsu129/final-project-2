@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./common.css">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <script src="script.js" defer></script>
   <title>Home</title>
 </head>
@@ -14,11 +14,11 @@
   <header>
     <input type="checkbox" id="menu-toggle" hidden>
     <label for="menu-toggle" id="menu-icon" aria-label="open menu">
-      <div id="menu-text">
+      <span id="menu-text">
         ☰
         <br>
         menu
-      </div>
+      </span>
     </label>
     <nav aria-label="main-nav">
       <div><a href="#" class="logo">Chiikawa</a></div>
@@ -26,59 +26,67 @@
         <ul>
           <li><a href="./index.html#youtube">
             YouTube
-            <img src="./assets/ic_YouTube.png">
+            <img src="./assets/ic_YouTube.png" alt="ic_YouTube">
           </a></li>
           <li><a href="./index.html#information">
             Information
-            <img src="./assets/ic_Infomation.png">
+            <img src="./assets/ic_Infomation.png" alt="ic_Infomation">
           </a></li>
           <li><a href="./index.html#introduction">
             Introduction
-            <img src="./assets/ic_Introduction.png">
+            <img src="./assets/ic_Introduction.png" alt="ic_Introduction">
           </a></li>
           <li><a href="./index.html#episodes">
             Episodes
-            <img src="./assets/ic_Story.png">
+            <img src="./assets/ic_Story.png" alt="ic_Story">
           </a></li>
           <li><a href="./characters.html">
             Characters
-            <img src="./assets/ic_Characters.png">
+            <img src="./assets/ic_Characters.png" alt="ic_Characters">
           </a></li>
           <li><a href="./index.html#staffandcast">
             Staff & Casts
-            <img src="./assets/ic_Staff&Casts.png">
+            <img src="./assets/ic_Staff&Casts.png" alt="ic_Staff">
           </a></li>
           <li><a href="./index.html#anime-info">
             Anime Info
-            <img src="./assets/ic_AnimeInfo.png">
+            <img src="./assets/ic_AnimeInfo.png" alt="ic_AnimeInfo">
           </a></li>
           <li><a href="./index.html#goods">
             Goods
-            <img src="./assets/ic_Goods.png">
+            <img src="./assets/ic_Goods.png" alt="ic_Goods">
           </a></li>
           <li><a href="./index.html#bdanddvd">
             BD & DVD
-            <img src="./assets/ic_BD&DVD.png">
+            <img src="./assets/ic_BD&DVD.png" alt="ic_BD&DVD">
           </a></li>
           <li><a href="./fandq.html">
             F&Q
-            <img src="./assets/faq.png">
+            <img src="./assets/faq.png" alt="ic_faq">
           </a></li>
           <li><a href="./contactUs.html">
             Contact Us
-            <img src="./assets/contact.png">
+            <img src="./assets/contact.png" alt="ic_contact">
           </a></li>
           <li>
-            <img id="header-img" src="./imgs/nav-img.png">
+            <img id="header-img" src="./imgs/nav-img.png" alt="nav-img">
           </li>
         </ul>
       </div>
     </nav>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" aria-label="hero">
       <h1 class="logo">Chiikawa</h1>
-      <img src="./imgs/kv_01.jpg" alt="heroimg">
+      <picture>
+        <!-- media 800px -->
+        <source srcset="./imgs/kv_01_sp.webp" type="image/webp" media="(max-width: 800px)">
+        <source srcset="./imgs/kv_01_sp.jpg" media="(max-width: 800px)">
+
+        <!-- media normal-->
+        <source srcset="./imgs/kv_01.webp" type="image/webp">
+        <img src="./imgs/kv_01.jpg" alt="heroimg">
+      </picture>
       <div class="X">
         <a href="https://twitter.com/anime_chiikawa?s=21">
           <p>Please check!</p>
@@ -91,7 +99,7 @@
         <p>Airing daily on Mezamashi TV!</p>
       </div>
     </section>
-    <section id="youtube">
+    <section id="youtube" aria-label="youtube">
       <h2>YouTube</h2>
       <ul>
         <li id="first">
@@ -113,7 +121,7 @@
       </ul>
       <a href="https://www.youtube.com/playlist?list=PLHIKP_Dyl1zwJy0JjSvVV5l8Kyg-8sjdv">All episodes</a>
     </section>
-    <section id="information">
+    <section id="information" aria-label="information">
       <h2>Information</h2>
       <ul>
         <li>
@@ -131,16 +139,20 @@
       </ul>
       <a href="">more Info</a>
     </section>
-    <section id="introduction">
+    <section id="introduction" aria-label="introduction">
       <h2>Introduction</h2>
       <p>
-        “Something small and cute”<br>
-        Chiikawa and friends bring you a heartwarming story filled with fun, friendship, and a few tearful moments.
+        <em>“Something small and cute”</em><br>
+        Chiikawa and friends bring you a <strong>heartwarming story</strong> filled with fun, friendship, and a few tearful moments.
       </p>
-      <p>Even when things get a little tough, there’s always someone kind nearby.</p>
-      <p>The beloved manga Chiikawa by illustrator Nagano is now an adorable anime!</p>
+      <p>
+        Even when things get a little tough, there’s always <strong>someone kind</strong> nearby.
+      </p>
+      <p>
+        The <strong>beloved manga</strong> Chiikawa by illustrator Nagano is now an adorable anime!
+      </p>
     </section>
-    <section id="episodes">
+    <section id="episodes" aria-label="episodes">
       <h2>Episodes</h2>
       <ul>
         <li>
@@ -176,7 +188,7 @@
       </ul>
       <a href="">All episodes</a>
     </section>
-    <section id= "characters">
+    <section id= "characters" aria-label="character">
       <h2>Characters</h2>
       <ul id="character-list">
         <li class="chiikawa">
@@ -194,7 +206,7 @@
       </ul>
       <a href="">view all</a>
     </section>
-    <section id="staffandcast">
+    <section id="staffandcast" aria-label="staff&cast">
       <h2>Staff & Cast</h2>
       <div class = "staff">
         <ul>
@@ -236,34 +248,34 @@
         </ul>
       </div>
     </section>
-    <section id="anime-info">
+    <section id="anime-info" aria-label="anime-info">
       <h2>Anime Info</h2>
       <ul>
         <li class="tv_info">
-          <img src="./assets/ic_Animeinfo_TV.png">
+          <img src="./assets/ic_Animeinfo_TV.png" alt="ic_Animeinfo_TV">
           <div>
             <p>Catch "Chiikawa" on Fuji TV's Mezamashi TV </p>
             <p>every Tuesday & Friday around 7:40 AM!</p>
           </div>
         </li>
         <li class="stream">
-          <img src="./assets/ic_Animeinfo_Stream.png">
+          <img src="./assets/ic_Animeinfo_Stream.png" alt="ic_Animeinfo_Stream">
           <div>
             <p>Missed it?</p>
             <p>Stream it for one week only starting from 8:00 AM on the same day!</p>
           </div>
         </li>
       </ul>
-      <a type="button" href="">more Info</a>
+      <a href="">more Info</a>
     </section>
-    <section id="goods">
+    <section id="goods" aria-label="goods">
       <h2>Goods</h2>
       <div>
-        <a href="https://chiikawa-info.jp/" ><img src="./imgs/bn_goods_01.png"></a>
-        <a href="https://chiikawamarket.jp/" ><img src="./imgs/bn_goods_02.png"></a>
+        <a href="https://chiikawa-info.jp/" ><img src="./imgs/bn_goods_01.png" alt="bn_goods_01"></a>
+        <a href="https://chiikawamarket.jp/" ><img src="./imgs/bn_goods_02.png" alt="bn_goods_02"></a>
       </div>
     </section>
-    <section id="bdanddvd">
+    <section id="bdanddvd" aria-label="bd&dvd">
       <h2>BD & DVD</h2>
       <div class="slider">
         <button id="prev">&lt;</button>
@@ -272,20 +284,20 @@
       </div>
     </section>
     <footer>
-      <img id="footer-img" src="./imgs/all.png">
-      <nav>
+      <img data-type="illust" src="./imgs/all.png" alt="footer-nav-img">
+      <nav aria-label="footer-nav">
         <h3>Share this site</h3>
         <ul>
-          <li><a href="https://twitter.com/share?url=https://www.anime-chiikawa.jp/&text=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F&hashtags=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F,%E3%82%A2%E3%83%8B%E3%83%A1"><img src="./assets/ic_sns_twi.png"></a></li>
-          <li><a href="https://social-plugins.line.me/lineit/share?url=https://www.anime-chiikawa.jp/"><img src="./assets/ic_sns_line.png"></a></li>
-          <li><a href="http://www.facebook.com/share.php?u=https://www.anime-chiikawa.jp/"><img src="./assets/ic_sns_fb.png"></a></li>
+          <li><a href="https://twitter.com/share?url=https://www.anime-chiikawa.jp/&text=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F&hashtags=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F,%E3%82%A2%E3%83%8B%E3%83%A1"><img src="./assets/ic_sns_twi.png" alt="ic_sns_twi"></a></li>
+          <li><a href="https://social-plugins.line.me/lineit/share?url=https://www.anime-chiikawa.jp/"><img src="./assets/ic_sns_line.png" alt="ic_sns_line"></a></li>
+          <li><a href="http://www.facebook.com/share.php?u=https://www.anime-chiikawa.jp/"><img src="./assets/ic_sns_fb.png" alt="ic_sns_fb"></a></li>
         </ul>
-        <p>This website uses cookies for site operation and management purposes.For more details, please refer to our <a href="https://www.fujitv.co.jp/userguide/protection.html?_ga=2.241454023.472348913.1747879599-1548855718.1747350247">Privacy Policy.</a></p>
       </nav>
+      <p>This website uses cookies for site operation and management purposes.For more details, please refer to our <a href="https://www.fujitv.co.jp/userguide/protection.html?_ga=2.241454023.472348913.1747879599-1548855718.1747350247">Privacy Policy.</a></p>
       <p>&copy; Nagano / Chiikawa Production Committee</p>
     </footer>
     <button id="back-to-top" aria-label="Back to top">
-      <img src="./assets/scrolltop.png">
+      <img src="./assets/scrolltop.png" alt="scrolltop_button">
     </button>
   </main>
 </body>

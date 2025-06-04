@@ -93,6 +93,11 @@ section > a{
     display: none;
   }
 }
+@media (max-width: 800px){
+  .hero h1{
+    display:none;
+  }
+}
 
 /* Youtube */
 #youtube{
@@ -185,12 +190,12 @@ section > a{
 
 /* introduction */
 #introduction{
-  margin: 5vh 3vw;
+  margin: 5vh 7vw;
 }
 #introduction p{
   text-align: center;
   font-weight: var(--h2-font-wight);
-  font-size: clamp(12px, 1.5vw, 20px);
+  font-size: clamp(0.75em, 2.5vw, 2em);
   color: var(--brown);
   max-width: 500px;
   margin: 2vw auto;
@@ -333,12 +338,14 @@ section > a{
 #anime-info li{
   display: flex;
   padding: clamp(5px, 1.5vw, 20px);
+  align-items: center;
   margin: 0 auto;
 }
 #anime-info img{
   display: inline;
   max-width: 5rem;
   height: auto;
+  object-fit: contain;
 }
 #anime-info li div{
   display: inline;
@@ -360,7 +367,8 @@ section > a{
 }
 
 /* bdanddvd */
-#bdanddvd{
+#bdanddvd, 
+#bdanddvd h2{
   padding: 5vh;
 }
 .slider{
@@ -378,11 +386,13 @@ section > a{
   color: var(--white);
   border-radius: 50px;
   border: none;
-  text-wrap: none;
+  white-space: nowrap;
   text-align: center;
 }
 #bdanddvd img{
-  width: 30vw;
+  width: 25vw;
+  height: auto;
+  object-fit: contain;
 }
 
 /* footer */
@@ -391,13 +401,14 @@ footer{
   padding: 6vh 10vw;
   background-color: rgb(59, 125, 59);
 }
-#footer-img{
+img[data-type="illust"]{
+  display: block;
+  margin: 0 auto;
   width: 60vw;
   height: auto;
-  text-align: center;
 }
-footer h3,
-footer p{
+footer  nav > h3,
+footer nav ~ p{
   color: var(--white);
 }
 footer h3{
@@ -414,6 +425,18 @@ footer li{
 }
 footer li img{
   width: clamp(50px, 8vw, 200px);
+}
+nav ul li a:hover img[src*="twi"]{
+  border: 2px solid skyblue;
+  border-radius: 8px;
+}
+nav ul li a:hover img[src*="line"]{
+  border: 2px solid rgb(135, 235, 180);
+  border-radius: 8px;
+}
+nav ul li a:hover img[src*="fb"]{
+  border: 2px solid rgb(135, 142, 235);
+  border-radius: 8px;
 }
 /* back-to-top */
 #back-to-top{
