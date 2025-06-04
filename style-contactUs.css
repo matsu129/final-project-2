@@ -17,10 +17,109 @@
   --button-width: clamp(200px, 20vw, 400px);;
 }
 main{
+  padding-top: 120px;
   scroll-margin-top: 120px;
+  display: flex;
+  width:fit-content;
+  margin: 2rem auto;
 }
 @media (max-width: 1200px) {
   main{
+    padding-top: 80px;
     scroll-margin-top: 80px;
+    flex-direction: column;
   }
+}
+/* form */
+#contact-form {
+  background: var(--lightyellow);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: min(90vw, 600px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#contact-form h1 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-wight);
+  margin-bottom: 1rem;
+  color: var(--brown);
+}
+#contact-form label {
+  font-size: var(--button-font-size);
+  font-weight: var(--h2-font-wight);
+  margin-bottom: 1rem;
+  color: var(--brown);
+}
+.wrapper input,
+.wrapper textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--pink);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.wrapper textarea {
+  resize: vertical;
+  min-height: 100px;
+  resize: none;
+}
+#submit {
+  background-color: var(--pink);
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: var(--button-font-size);
+  width: var(--button-width);
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#submit:hover {
+  background-color: var(--brown);
+}
+
+/* info section */
+.info {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: var(--lightgreen);
+  border-radius: 16px;
+  text-align: center;
+  font-size: var(--button-font-size);
+  font-weight: bold;
+  color: var(--brown);
+}
+.info #text li{
+  margin: clamp(0.5rem, 1vw, 1rem);;
+}
+.info #icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.info #icon li{
+  margin: clamp(0.5rem, 1vw, 1rem);
+}
+.info #icon img{
+  width: clamp(50px, 4vw, 80px);
+}
+/* footer */
+footer{
+  text-align: center;
+  padding: 6vh 10vw;
+  background-color: rgb(59, 125, 59);
+}
+footer img{
+  max-width: 30vw;
+  height: auto;
+  text-align: center;
 }

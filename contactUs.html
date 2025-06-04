@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./common.css">
   <link rel="stylesheet" href="./style-contactUs.css">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -14,7 +14,7 @@
     <header>
     <input type="checkbox" id="menu-toggle" hidden>
     <label for="menu-toggle" id="menu-icon" aria-label="open menu">
-      <div #id="menu-text">
+      <div id="menu-text">
         ☰
         <br>
         menu
@@ -76,32 +76,47 @@
     </nav>
   </header>
   <main>
-    <form id="contact-form" action="submit" method="post">
-    <h1>Contact Us</h1>
-    <div class="inputinfo">
-      <div class="wrapper">
-        <input type="text" name="name" placeholder="Full Name">
+    <form id="contact-form" action="#" method="post" class="animate__animated animate__fadeInUp animate__slow">
+      <h1>Contact Us</h1>
+      <div class="inputinfo">
+        <div class="wrapper">
+          <label for="name" >Full Name</label>
+          <input type="text" name="name" placeholder="Full Name">
+        </div>
+        <div class="wrapper">
+          <label for="email" >e-mail</label>
+          <input type="email" name="email" placeholder="E-mail">
+        </div>
+        <div class="wrapper">
+          <label for="message" >Message</label>
+          <textarea name="message" placeholder="Message"></textarea>
+        </div>
       </div>
-      <div class="wrapper">
-        <input type="email" name="email" placeholder="E-mail">
-      </div>
-      <div class="wrapper">
-        <input type="text" name="message" placeholder="Message">
-      </div>
-    </div>
-    <input type="submit" value="Contact Us" name="submit" id="submit">
-  </form>
-  <div class="info">
-    <div id="contact">
-      <h3>Contact</h3>
-      <p>hi@green.com</p>
-    </div>
-    <div id="basedin">
-      <h3>Based In</h3>
-      <p>New York,</p>
-      <p>California, Ohio</p>
-    </div>
+      <input type="submit" value="Contact Us" name="submit" id="submit">
+    </form>
+    <section class="info">
+      <ul id="text">
+        <li>
+          <h3>Contact</h3>
+          <p>chiikawa@nagano.com</p>
+        </li>
+        <li>
+          <h3>Based In</h3>
+          <p>Shibuya,</p>
+          <p>Japan, Tokyo</p>
+        </li>
+      </ul>
+      <ul id="icon">
+        <li><a href="https://twitter.com/share?url=https://www.anime-chiikawa.jp/&text=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F&hashtags=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F,%E3%82%A2%E3%83%8B%E3%83%A1"><img src="./assets/ic_sns_twi.png"></a></li>
+        <li><a href="https://social-plugins.line.me/lineit/share?url=https://www.anime-chiikawa.jp/"><img src="./assets/ic_sns_line.png"></a></li>
+        <li><a href="http://www.facebook.com/share.php?u=https://www.anime-chiikawa.jp/"><img src="./assets/ic_sns_fb.png"></a></li>
+      </ul>
+    </section>
   </main>
-  
+  <footer>
+    <img src="./imgs/kyoto.png" alt="contact-img">
+    <p>This website uses cookies for site operation and management purposes.For more details, please refer to our <a href="https://www.fujitv.co.jp/userguide/protection.html?_ga=2.241454023.472348913.1747879599-1548855718.1747350247">Privacy Policy.</a></p>
+    <p>&copy; Nagano / Chiikawa Production Committee</p>
+  </footer>
 </body>
 </html>
